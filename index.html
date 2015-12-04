@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tabmenü Umwandler</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="Content/bootstrap-theme.min.css" />
+</head>
+<body>
+    <div id="wrapper">
+        <div class="row">
+            <h1 class="col-md-offset-2 col-sm-offset-1 col-xs-offset-1">Tabmenü Umwandler</h1>
+            <div id="desc" class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+                Mit diesem Tool kannst du den BB-Code von einem Tabmenü in eine Kombination aus <kbd>h</kbd>-Überschriften und <kbd>spoiler</kbd>n. Kopiere dazu den Quelltext von <strong>einem</strong> Tabmenü in die Eingabebox und wähle das Format in dem die Titel der Tabs definiert werden.
+                Nun musst du nur noch den <i>Umwandeln</i>-Button drücken und den Quellcode aus der Ausgabebox in deinen Beitrag im Bisaboard kopieren.
+            </div>
+        </div>
+        <div class="row">
+            <div id="input" class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <h2>Eingabe</h2>
+                <textarea id="inputArea" class="form-control" rows="10"></textarea>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label class="radio-inline">
+                            <input checked="checked" type="radio" name="bbCodeFormat" id="radioFormat1" value="1"> <code>[tab=Titel]</code>
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="bbCodeFormat" id="radioFormat2" value="2"> <code>[tab="Titel"]</code>
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="bbCodeFormat" id="radioFormat3" value="3"> <code>[tab='Titel']</code>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button type="button" id="buttonGenerate" class="btn btn-primary btn-lg btn-block">Quellcode umwandeln</button>
+                    </div>
+                </div>
+            </div>
+            <div id="output" class="col-md-4 col-sm-5 col-xs-10 col-xs-offset-1 col-sm-offset-0">
+                <h2>Ausgabe</h2>
+                <textarea id="outputArea" class="form-control" rows="10"></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/codeParser.js"></script>
+</body>
+</html>
