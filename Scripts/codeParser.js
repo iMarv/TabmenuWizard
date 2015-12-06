@@ -7,8 +7,8 @@
         var regexSubTab;
         switch (bbFormat) {
             case '1':
-                regexTab = /\[tab=((\w|[ äöüÄÖÜ,.-;:_#'+*!"§$%&/()=?ß^°])*)\]/g;
-                regexSubTab = /\[subtab=((\w|[ äöüÄÖÜ,.-;:_#'+*!"§$%&/()=?ß^°])*)\]((.|\s)+?((?=\[subtab)|(?=\[\/tabmenu)|(?=\[tab)))/g;
+                regexTab = /\[tab=((\w|[ äöüÄÖÜ,.\-;:_#'+*!"§$%&/()=?ß^°])*)\]/g;
+                regexSubTab = /\[subtab=((\w|[ äöüÄÖÜ,.\-;:_#'+*!"§$%&/()=?ß^°])*)\]((.|\s)+?((?=\[subtab)|(?=\[\/tabmenu)|(?=\[tab)))/g;
                 titleTemplate = '###';
                 break;
             case '2':
